@@ -27,9 +27,18 @@ const handleUserInput = function (data) {
     connection.write('Move: down');
   }
 
-    if (data === 'd') {
-      console.log("right")
+  if (data === 'd') {
+    console.log("right")
     connection.write('Move: right');
+  }
+  if (data === 'q') {
+    console.log("q")
+    connection.write('Say: *slithers*');
+  }
+
+  if (data === 'e') {
+    console.log("e")
+    connection.write('Say: SSSsss');
   }
 
   if (data === '\u0003') {

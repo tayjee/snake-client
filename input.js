@@ -1,4 +1,5 @@
 let connection;
+const {inputs} = require('./constants');
 
 const setupInput = (conn) => {
   connection = conn;
@@ -13,32 +14,24 @@ const setupInput = (conn) => {
 const handleUserInput = function (data) {
   // your code here
   if (data === 'w') {
-    console.log("up")
-    connection.write('Move: up');
+    connection.write(inputs[data]);
   }
-
   if (data === 'a') {
-    console.log("left")
-    connection.write('Move: left');
+    connection.write(inputs[data]);
   }
-
   if (data === 's') {
-    console.log("down")
-    connection.write('Move: down');
+    connection.write(inputs[data]);
   }
-
   if (data === 'd') {
-    console.log("right")
-    connection.write('Move: right');
+    connection.write(inputs[data]);
   }
+  
   if (data === 'q') {
-    console.log("q")
-    connection.write('Say: *slithers*');
+    connection.write(inputs[data]);
   }
 
   if (data === 'e') {
-    console.log("e")
-    connection.write('Say: SSSsss');
+    connection.write(inputs[data]);
   }
 
   if (data === '\u0003') {
@@ -48,4 +41,4 @@ const handleUserInput = function (data) {
 
 };
 
-module.exports = {setupInput, handleUserInput}
+module.exports = {setupInput}

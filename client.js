@@ -14,7 +14,9 @@ const connect = function() {
     console.log("Connected to the game server.");
     conn.write("Name: Jimmy");
   });
+  return conn;
 };
+
 
 module.exports = {connect};
 
